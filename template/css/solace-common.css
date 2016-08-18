@@ -147,8 +147,8 @@ li.navlink_current a {color:#003b74; text-decoration:none; font-weight:700;}
 
 /* Landing Page Headings
 ================================================== */
-h2.nolineheading { font-size: 28px; line-height: 1.1em; margin-bottom: 10px; }
-h3.nolineheading { font-size: 18px; line-height: 1.1em; margin-bottom: 8px; }
+h2.nolineheading { margin-top:0; padding-top:0; border-top:none; }
+h3.nolineheading { margin-top:0; padding-top:0; border-top:none;}
 
 
 /**
