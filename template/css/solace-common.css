@@ -48,8 +48,8 @@ body {
 	#top h1 a, #top h2 a, #top h3 a, #top h4 a, #top h5 a, #top h6 a { font-weight: inherit; text-decoration: none; color: inherit; }
 	#top h1 strong, #top h2 strong, #top h3 strong, #top h4 strong, #top h5 strong, #top h6 strong { color: inherit; }
 	h1 { font-size: 34px; line-height: 1.1em; margin-bottom: 14px;}
-	h2 { font-size: 28px; line-height: 1.1em; margin-bottom: 10px; }
-	h3 { font-size: 18px; line-height: 1.1em; margin-bottom: 8px; } /*28*/
+  h2 { font-size: 28px; line-height: 1.1em; margin-bottom: 10px; margin-top:36px; padding-top:12px; border-top:solid 2px #c9c9c9;}
+  h3 { width:90%; font-size: 18px; line-height: 1.1em; margin-bottom: 8px; margin-top:30px; padding-top:12px; border-top:solid 1px #dfdfdf;}
 	h4 { font-size: 14px; line-height: 1.1em; margin-bottom: 4px; } /*21*/
 
 	p { margin: 0.85em 0; }
