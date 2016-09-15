@@ -426,6 +426,6 @@ Small Device Styles
 
 /* Button
 ================================================== */
-.button {width:150px; padding:10px; background:#005dab; text-align:center; border:1px solid #013a6a; border-radius:4px;}
+.button {width:150px; padding:10px; background:#005dab; text-align:center; border:1px solid #013a6a; border-radius:4px; margin: 0 auto}
 .button:hover {background:#013a6a;}
 a.button-text {text-decoration:none; color:#fff;}

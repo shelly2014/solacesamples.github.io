@@ -1,99 +1,21 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="SolaceSamples.GitHub.io : Solace Samples">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/gridism.css">
-
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-     ga('create', 'UA-3921398-7', 'auto');
-     ga('send', 'pageview');
-
-    </script>
-    
-    <title>SolaceSamples.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/SolaceSamples">View on GitHub</a>
-
-          <h1 id="project_title">Solace Samples</h1>
-          <h2 id="project_tagline">Learn Solace Messaging quickly using "How To" tutorials</h2>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-
-        <div class="unit whole" style='padding:10px;'>
-          <div class="grid" style='border-width:1px; border-color:#d3d3d3; border-style:solid; padding:10px; background-color:#ffffff; border-radius:5px;'>
-            <h3>Solace Messaging API for Java</h3>
-            <div class='unit half' style='font-size:14px; '  itemprop="text" >
-              <p>
-                The Solace Java API (also referred to as JCSMP) is a 100% pure Java implementation that delivers high message throughput and reasonably low latency.
-              </p>
-              <a href="https://solacesamples.github.io/solace-samples-java/" class="button-text"><div class="button">Get Started</div></a>
-            </div>
-            <div class='unit half'>
-              <img src="images/java-logo.jpg" alt="JCSMP" width="193" height="145" style="display: block; margin: 0 auto;"/>
-            </div>
-          </div>
+{% for project in site.data.projects %}
+  <!-- For now assume no need for section titles -->
+  {% assign loopindex = forloop.index | modulo: 2 %}
+  {% if loopindex == 1 or forloop.first %}
+    <div class="grid">
+  {% endif %}
+      <div class="unit half" style='padding:10px; text-align: center'>
+        <div class="grid" style='border-width:1px; border-color:#d3d3d3; border-style:solid; padding:10px; background-color:#ffffff; border-radius:5px;'>
+          <h3 class="nolineheading">{{ project.title }}</h3>
+          <img src="{{ site.baseurl }}/images/{{ project.image }}" alt="{{ project.title }}" height="100"/>
+          <a href="{{ project.url }}" class="button-text"><div class="button">Get Started</div></a>
         </div>
-
-        <div class="unit whole" style='padding:10px;'>
-          <div class="grid" style='border-width:1px; border-color:#d3d3d3; border-style:solid; padding:10px; background-color:#ffffff; border-radius:5px;'>
-            <h3>Solace Messaging API for JMS</h3>
-            <div class='unit half' style='font-size:14px; '  itemprop="text" >
-              <p>
-                The Solace JMS API uses the standard JMS interface to provide JMS service for Java-based applications through a Solace message router. The Solace JMS API supports JMS version 1.1. 
-              </p>
-              <a href="https://solacesamples.github.io/solace-samples-jms/" class="button-text"><div class="button">Get Started</div></a>
-            </div>
-            <div class='unit half'>
-              <img src="images/jms-logo.png" alt="JMS" width="193" style="display: block; margin: 0 auto;"/>
-            </div>
-          </div>
-        </div>
-
-        <div class="unit whole" style='padding:10px;'>
-          <div class="grid" style='border-width:1px; border-color:#d3d3d3; border-style:solid; padding:10px; background-color:#ffffff; border-radius:5px;'>
-            <h3>Solace Messaging for Pivotal Cloud Foundry</h3>
-            <div class='unit half' style='font-size:14px; '  itemprop="text" >
-              <p>
-                The Pivotal Cloud Foundry Tile provides Solace Messaging as a service within Pivotal Cloud Foundry. These example applications show how Java applications can easily using Cloud Foundry Service Instances to bind and connect their applications to Solace Message Routers.
-              </p>
-              <a href="https://solacesamples.github.io/solace-samples-cloudfoundry-java/" class="button-text"><div class="button">Get Started</div></a>
-            </div>
-            <div class='unit half'>
-              <img src="images/cloud-foundry-logo-tall.png" alt="Cloud Foundry" width="164" height="168" style="display: block; margin: 0 auto;"/>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+  {% if loopindex != 1 or forloop.last %}
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <a href="http://dev.solacesystems.com"><img src="images/dev-solacesystems-logo.png" alt="http://dev.solacesystems.com"/></a>
-      </footer>
-    </div>
-
-
-
-  </body>
-</html>
+  {% endif %}
+{% endfor %}
