@@ -11,4 +11,6 @@
 - title: Solace Transport for OpenMAMA
   image: OpenMAMA-logo.png
   url: https://solacesamples.github.io/solace-samples-openmama/
-  
+- title: Solace REST Messaging
+  image: rest-api.png
+  url: https://solacesamples.github.io/solace-samples-rest-messaging/
